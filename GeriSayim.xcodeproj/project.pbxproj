@@ -13,6 +13,9 @@
 		84DD076328A709B2009C8F5E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84DD076128A709B2009C8F5E /* Main.storyboard */; };
 		84DD076528A709B3009C8F5E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84DD076428A709B3009C8F5E /* Assets.xcassets */; };
 		84DD076828A709B3009C8F5E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84DD076628A709B3009C8F5E /* LaunchScreen.storyboard */; };
+		84DD077028A7A8FC009C8F5E /* detayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DD076F28A7A8FC009C8F5E /* detayViewController.swift */; };
+		84DD077228A7A903009C8F5E /* ekleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DD077128A7A903009C8F5E /* ekleViewController.swift */; };
+		84DD077428A7A914009C8F5E /* hucreTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DD077328A7A914009C8F5E /* hucreTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		84DD076428A709B3009C8F5E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		84DD076728A709B3009C8F5E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		84DD076928A709B3009C8F5E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84DD076F28A7A8FC009C8F5E /* detayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = detayViewController.swift; sourceTree = "<group>"; };
+		84DD077128A7A903009C8F5E /* ekleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ekleViewController.swift; sourceTree = "<group>"; };
+		84DD077328A7A914009C8F5E /* hucreTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = hucreTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +62,26 @@
 		84DD075A28A709B2009C8F5E /* GeriSayim */ = {
 			isa = PBXGroup;
 			children = (
+				84DD076128A709B2009C8F5E /* Main.storyboard */,
+				84DD075F28A709B2009C8F5E /* ViewController.swift */,
+				84DD076F28A7A8FC009C8F5E /* detayViewController.swift */,
+				84DD077128A7A903009C8F5E /* ekleViewController.swift */,
+				84DD077328A7A914009C8F5E /* hucreTableViewCell.swift */,
+				84DD077528A7ACF5009C8F5E /* Support */,
+				84DD076428A709B3009C8F5E /* Assets.xcassets */,
+			);
+			path = GeriSayim;
+			sourceTree = "<group>";
+		};
+		84DD077528A7ACF5009C8F5E /* Support */ = {
+			isa = PBXGroup;
+			children = (
 				84DD075B28A709B2009C8F5E /* AppDelegate.swift */,
 				84DD075D28A709B2009C8F5E /* SceneDelegate.swift */,
-				84DD075F28A709B2009C8F5E /* ViewController.swift */,
-				84DD076128A709B2009C8F5E /* Main.storyboard */,
-				84DD076428A709B3009C8F5E /* Assets.xcassets */,
 				84DD076628A709B3009C8F5E /* LaunchScreen.storyboard */,
 				84DD076928A709B3009C8F5E /* Info.plist */,
 			);
-			path = GeriSayim;
+			path = Support;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,7 +156,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				84DD076028A709B2009C8F5E /* ViewController.swift in Sources */,
+				84DD077428A7A914009C8F5E /* hucreTableViewCell.swift in Sources */,
 				84DD075C28A709B2009C8F5E /* AppDelegate.swift in Sources */,
+				84DD077028A7A8FC009C8F5E /* detayViewController.swift in Sources */,
+				84DD077228A7A903009C8F5E /* ekleViewController.swift in Sources */,
 				84DD075E28A709B2009C8F5E /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -289,7 +309,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = Q6XS9G2H7P;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = GeriSayim/Info.plist;
+				INFOPLIST_FILE = GeriSayim/Support/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -317,7 +337,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = Q6XS9G2H7P;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = GeriSayim/Info.plist;
+				INFOPLIST_FILE = GeriSayim/Support/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
