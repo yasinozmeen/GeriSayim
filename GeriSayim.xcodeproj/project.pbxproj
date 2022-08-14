@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		840DD3DD28A95566000DE330 /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 840DD3D228A95566000DE330 /* FMDatabaseQueue.m */; };
+		840DD3DE28A95566000DE330 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 840DD3D728A95566000DE330 /* FMDatabasePool.m */; };
+		840DD3DF28A95566000DE330 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 840DD3D828A95566000DE330 /* FMResultSet.m */; };
+		840DD3E028A95566000DE330 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 840DD3DA28A95566000DE330 /* FMDatabase.m */; };
+		840DD3E128A95566000DE330 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 840DD3DB28A95566000DE330 /* FMDatabaseAdditions.m */; };
+		840DD3E328A9568E000DE330 /* EtkinlikDB.db in Resources */ = {isa = PBXBuildFile; fileRef = 840DD3E228A9568E000DE330 /* EtkinlikDB.db */; };
+		840DD3E528A95804000DE330 /* EtkinlikDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840DD3E428A95804000DE330 /* EtkinlikDao.swift */; };
 		84DD075C28A709B2009C8F5E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DD075B28A709B2009C8F5E /* AppDelegate.swift */; };
 		84DD075E28A709B2009C8F5E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DD075D28A709B2009C8F5E /* SceneDelegate.swift */; };
 		84DD076028A709B2009C8F5E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DD075F28A709B2009C8F5E /* ViewController.swift */; };
@@ -16,9 +23,25 @@
 		84DD077028A7A8FC009C8F5E /* detayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DD076F28A7A8FC009C8F5E /* detayViewController.swift */; };
 		84DD077228A7A903009C8F5E /* ekleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DD077128A7A903009C8F5E /* ekleViewController.swift */; };
 		84DD077428A7A914009C8F5E /* hucreTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DD077328A7A914009C8F5E /* hucreTableViewCell.swift */; };
+		84F0BDD228A82E310026B9DB /* Etkinlik.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F0BDD128A82E310026B9DB /* Etkinlik.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		840DD3D028A95552000DE330 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		840DD3D128A95565000DE330 /* GeriSayim-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GeriSayim-Bridging-Header.h"; sourceTree = "<group>"; };
+		840DD3D228A95566000DE330 /* FMDatabaseQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseQueue.m; sourceTree = "<group>"; };
+		840DD3D328A95566000DE330 /* FMDatabasePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabasePool.h; sourceTree = "<group>"; };
+		840DD3D428A95566000DE330 /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
+		840DD3D528A95566000DE330 /* FMDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDB.h; sourceTree = "<group>"; };
+		840DD3D628A95566000DE330 /* FMDatabaseQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseQueue.h; sourceTree = "<group>"; };
+		840DD3D728A95566000DE330 /* FMDatabasePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabasePool.m; sourceTree = "<group>"; };
+		840DD3D828A95566000DE330 /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
+		840DD3D928A95566000DE330 /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
+		840DD3DA28A95566000DE330 /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
+		840DD3DB28A95566000DE330 /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseAdditions.m; sourceTree = "<group>"; };
+		840DD3DC28A95566000DE330 /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
+		840DD3E228A9568E000DE330 /* EtkinlikDB.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = EtkinlikDB.db; sourceTree = "<group>"; };
+		840DD3E428A95804000DE330 /* EtkinlikDao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EtkinlikDao.swift; sourceTree = "<group>"; };
 		84DD075828A709B2009C8F5E /* GeriSayim.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GeriSayim.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84DD075B28A709B2009C8F5E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84DD075D28A709B2009C8F5E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -30,6 +53,7 @@
 		84DD076F28A7A8FC009C8F5E /* detayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = detayViewController.swift; sourceTree = "<group>"; };
 		84DD077128A7A903009C8F5E /* ekleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ekleViewController.swift; sourceTree = "<group>"; };
 		84DD077328A7A914009C8F5E /* hucreTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = hucreTableViewCell.swift; sourceTree = "<group>"; };
+		84F0BDD128A82E310026B9DB /* Etkinlik.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Etkinlik.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,11 +67,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		840DD3CF28A95552000DE330 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				840DD3E228A9568E000DE330 /* EtkinlikDB.db */,
+				840DD3D928A95566000DE330 /* FMDatabase.h */,
+				840DD3DA28A95566000DE330 /* FMDatabase.m */,
+				840DD3D428A95566000DE330 /* FMDatabaseAdditions.h */,
+				840DD3DB28A95566000DE330 /* FMDatabaseAdditions.m */,
+				840DD3D328A95566000DE330 /* FMDatabasePool.h */,
+				840DD3D728A95566000DE330 /* FMDatabasePool.m */,
+				840DD3D628A95566000DE330 /* FMDatabaseQueue.h */,
+				840DD3D228A95566000DE330 /* FMDatabaseQueue.m */,
+				840DD3D528A95566000DE330 /* FMDB.h */,
+				840DD3DC28A95566000DE330 /* FMResultSet.h */,
+				840DD3D828A95566000DE330 /* FMResultSet.m */,
+				840DD3D028A95552000DE330 /* libsqlite3.tbd */,
+				840DD3D128A95565000DE330 /* GeriSayim-Bridging-Header.h */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		84DD074F28A709B2009C8F5E = {
 			isa = PBXGroup;
 			children = (
 				84DD075A28A709B2009C8F5E /* GeriSayim */,
 				84DD075928A709B2009C8F5E /* Products */,
+				840DD3CF28A95552000DE330 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +113,8 @@
 				84DD076F28A7A8FC009C8F5E /* detayViewController.swift */,
 				84DD077128A7A903009C8F5E /* ekleViewController.swift */,
 				84DD077328A7A914009C8F5E /* hucreTableViewCell.swift */,
+				84F0BDD128A82E310026B9DB /* Etkinlik.swift */,
+				840DD3E428A95804000DE330 /* EtkinlikDao.swift */,
 				84DD077528A7ACF5009C8F5E /* Support */,
 				84DD076428A709B3009C8F5E /* Assets.xcassets */,
 			);
@@ -116,6 +164,7 @@
 				TargetAttributes = {
 					84DD075728A709B2009C8F5E = {
 						CreatedOnToolsVersion = 13.4.1;
+						LastSwiftMigration = 1340;
 					};
 				};
 			};
@@ -144,6 +193,7 @@
 			files = (
 				84DD076828A709B3009C8F5E /* LaunchScreen.storyboard in Resources */,
 				84DD076528A709B3009C8F5E /* Assets.xcassets in Resources */,
+				840DD3E328A9568E000DE330 /* EtkinlikDB.db in Resources */,
 				84DD076328A709B2009C8F5E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -156,11 +206,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				84DD076028A709B2009C8F5E /* ViewController.swift in Sources */,
+				840DD3DD28A95566000DE330 /* FMDatabaseQueue.m in Sources */,
 				84DD077428A7A914009C8F5E /* hucreTableViewCell.swift in Sources */,
 				84DD075C28A709B2009C8F5E /* AppDelegate.swift in Sources */,
+				840DD3DF28A95566000DE330 /* FMResultSet.m in Sources */,
+				840DD3DE28A95566000DE330 /* FMDatabasePool.m in Sources */,
+				840DD3E528A95804000DE330 /* EtkinlikDao.swift in Sources */,
 				84DD077028A7A8FC009C8F5E /* detayViewController.swift in Sources */,
 				84DD077228A7A903009C8F5E /* ekleViewController.swift in Sources */,
 				84DD075E28A709B2009C8F5E /* SceneDelegate.swift in Sources */,
+				840DD3E028A95566000DE330 /* FMDatabase.m in Sources */,
+				84F0BDD228A82E310026B9DB /* Etkinlik.swift in Sources */,
+				840DD3E128A95566000DE330 /* FMDatabaseAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -305,6 +362,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = Q6XS9G2H7P;
@@ -323,6 +381,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = yasinozmeen.GeriSayim;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "GeriSayim-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -333,6 +393,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = Q6XS9G2H7P;
@@ -351,6 +412,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = yasinozmeen.GeriSayim;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "GeriSayim-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
