@@ -12,6 +12,11 @@ class ViewController: UIViewController {
         tableView.dataSource = self
       
         veriTabanıKopyala()
+        
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        liste = EtkinlikDao().tumEtkinliklerAL()
+        tableView.reloadData()
     }
     func veriTabanıKopyala(){
         let bundleYolu = Bundle.main.path(forResource: "EtkinlikDB", ofType: ".db")

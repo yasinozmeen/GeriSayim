@@ -23,7 +23,7 @@ class EtkinlikDao{
         do{
             let rs =  try db!.executeQuery("SELECT * FROM Etkinlik", values: nil)
             while rs.next(){
-                let etkinlik = Etkinlik(etkinlikId: Int(rs.string(forColumn: "etkinlikId") ?? "hata")!, etkinlikAdi: rs.string(forColumn: "etkinlikAdi") ?? "hata" , etkinlikTarihi: rs.string(forColumn: "etkinlikTarihi") ?? "hata" , etkinlikDetay: rs.string(forColumn: "etkinlikDetay") ?? "Hata")
+                let etkinlik = Etkinlik(etkinlikId: Int(rs.string(forColumn: "etkinlikId") ?? "hata")!, etkinlikAdi: rs.string(forColumn: "etkinlikAd") ?? "hata" , etkinlikTarihi: rs.string(forColumn: "etkinlikTarih") ?? "hata" , etkinlikDetay: rs.string(forColumn: "etkinlikDetay") ?? "Hata")
                 liste.append(etkinlik)
             }
         }catch{
@@ -32,5 +32,18 @@ class EtkinlikDao{
         
         db?.close()
         return liste
+    }
+    
+    func etkinlikEkle(etkinlikAdi:String,etkinlikTarihi:String,etkinlikDetay:String){
+        db?.open()
+        
+        do{
+            try db?.executeUpdate("INSERT INTO Etkinlik (etkinlikAd,etkinlikTarih,etkinlikDetay) VALUES (?,?,?)", values: [etkinlikAdi,etkinlikTarihi,etkinlikDetay])
+        }catch{
+            print(error.localizedDescription)
+            
+        }
+        
+        db?.close()
     }
 }

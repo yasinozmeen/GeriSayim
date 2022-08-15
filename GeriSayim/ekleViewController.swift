@@ -1,29 +1,20 @@
-//
-//  ekleViewController.swift
-//  GeriSayim
-//
-//  Created by Kadir Yasin Özmen on 13.08.2022.
-//
-
 import UIKit
 
 class ekleViewController: UIViewController {
-
+    @IBOutlet var etkinlikAdiTextField: UITextField!
+    @IBOutlet var etkinlikDetayTextField: UITextView!
+    @IBOutlet var etkinlikTarihiTextField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+      
+    }
+    @IBAction func ekleButton(_ sender: Any) {
+        if let ad = etkinlikAdiTextField.text, let tarih = etkinlikTarihiTextField.text, let detay = etkinlikDetayTextField.text{
+        EtkinlikDao().etkinlikEkle(etkinlikAdi: ad, etkinlikTarihi: tarih, etkinlikDetay: detay)
+        }
+        navigationController?.popViewController(animated: true)
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

@@ -225,6 +225,9 @@
                                 <rect key="frame" x="162" y="679" width="51" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Ekle"/>
+                                <connections>
+                                    <action selector="ekleButton:" destination="IpH-3u-Fi9" eventType="touchUpInside" id="UUb-vX-OQK"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Etkinlik Açıklaması giriniz" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ArV-Qz-7CB">
                                 <rect key="frame" x="16" y="262" width="200" height="21"/>
@@ -252,6 +255,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Geri Sayım Ekle" id="zXg-9W-P0C"/>
+                    <connections>
+                        <outlet property="etkinlikAdiTextField" destination="mvZ-qm-B6R" id="YbL-O4-VDQ"/>
+                        <outlet property="etkinlikDetayTextField" destination="HDy-ZY-eKz" id="ngD-8m-bX7"/>
+                        <outlet property="etkinlikTarihiTextField" destination="IlA-Sr-veV" id="9VR-7o-Bpy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0cn-h3-LCa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
