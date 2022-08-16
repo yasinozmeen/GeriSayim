@@ -27,51 +27,43 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GeriSayim" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hSd-98-HVm">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GeriSayim " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hSd-98-HVm">
                                                     <rect key="frame" x="295" y="0.0" width="80" height="80"/>
                                                     <color key="backgroundColor" red="0.0" green="0.45882352939999999" blue="0.89019607840000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="80" id="qmw-Dh-eIt"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <nil key="textColor"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EtkinlikAdı" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eAn-kX-1mH">
-                                                    <rect key="frame" x="70" y="14.999999999999998" width="79" height="20.333333333333329"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
+                                                    <rect key="frame" x="36.000000000000007" y="16" width="101.66666666666669" height="24"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EtkinlikTarihiadadadasdada" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xs2-81-Sd8">
-                                                    <rect key="frame" x="70" y="44" width="206" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="25-08-2022 21:14" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xs2-81-Sd8">
+                                                    <rect key="frame" x="36" y="45" width="140" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="square.and.arrow.up" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="gPl-xk-SpD">
-                                                    <rect key="frame" x="10" y="13.999999999999996" width="50" height="50.666666666666657"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="50" id="u6S-hj-zKm"/>
-                                                        <constraint firstAttribute="height" constant="50" id="zwk-6m-HUZ"/>
-                                                    </constraints>
-                                                </imageView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="eAn-kX-1mH" firstAttribute="top" secondItem="gPl-xk-SpD" secondAttribute="top" id="1dh-CF-PjM"/>
                                                 <constraint firstAttribute="trailing" secondItem="hSd-98-HVm" secondAttribute="trailing" id="4wi-B5-abM"/>
                                                 <constraint firstItem="hSd-98-HVm" firstAttribute="height" secondItem="iVy-X6-iPd" secondAttribute="height" id="712-Wq-ms8"/>
-                                                <constraint firstItem="eAn-kX-1mH" firstAttribute="leading" secondItem="gPl-xk-SpD" secondAttribute="trailing" constant="10" id="DHz-z8-bVI"/>
-                                                <constraint firstItem="xs2-81-Sd8" firstAttribute="leading" secondItem="gPl-xk-SpD" secondAttribute="trailing" constant="10" id="GCM-pR-It4"/>
-                                                <constraint firstItem="gPl-xk-SpD" firstAttribute="centerY" secondItem="iVy-X6-iPd" secondAttribute="centerY" id="P21-ma-3dy"/>
-                                                <constraint firstItem="xs2-81-Sd8" firstAttribute="bottom" secondItem="gPl-xk-SpD" secondAttribute="bottom" id="gHY-Gh-BtS"/>
-                                                <constraint firstItem="gPl-xk-SpD" firstAttribute="leading" secondItem="iVy-X6-iPd" secondAttribute="leading" constant="10" id="pYg-JA-ogi"/>
+                                                <constraint firstItem="xs2-81-Sd8" firstAttribute="leading" secondItem="eAn-kX-1mH" secondAttribute="leading" id="9o7-uZ-ADR"/>
+                                                <constraint firstItem="xs2-81-Sd8" firstAttribute="top" secondItem="eAn-kX-1mH" secondAttribute="bottom" constant="5" id="BSR-JO-q6v"/>
+                                                <constraint firstItem="eAn-kX-1mH" firstAttribute="top" secondItem="iVy-X6-iPd" secondAttribute="topMargin" constant="5" id="P5a-Ql-aC2"/>
+                                                <constraint firstItem="eAn-kX-1mH" firstAttribute="leading" secondItem="iVy-X6-iPd" secondAttribute="leadingMargin" constant="20" id="XfW-9X-60X"/>
                                                 <constraint firstItem="hSd-98-HVm" firstAttribute="centerY" secondItem="iVy-X6-iPd" secondAttribute="centerY" id="toY-Az-gb2"/>
+                                                <constraint firstItem="eAn-kX-1mH" firstAttribute="top" secondItem="iVy-X6-iPd" secondAttribute="topMargin" constant="5" id="x40-xN-UBT"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
                                             <outlet property="etkinlikAdiLabel" destination="eAn-kX-1mH" id="mW1-OI-rSX"/>
-                                            <outlet property="etkinlikEmojiImageView" destination="gPl-xk-SpD" id="AUk-GP-Fgd"/>
                                             <outlet property="etkinlikTarihiLAbel" destination="xs2-81-Sd8" id="fr4-8F-hu2"/>
                                             <outlet property="geriSayimSüreLabel" destination="hSd-98-HVm" id="qhu-iR-R50"/>
                                         </connections>
@@ -98,7 +90,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="mJo-69-ZGE" id="07L-FB-oQF"/>
-                        <segue destination="eNP-4S-qtE" kind="show" id="9IQ-On-XHe"/>
+                        <segue destination="eNP-4S-qtE" kind="show" identifier="toDetay" id="9IQ-On-XHe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -115,6 +107,7 @@
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Etkinlik Adı" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5EI-ln-AOF">
                                 <rect key="frame" x="62.666666666666657" y="138" width="249.99999999999997" height="34"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="250" id="601-zX-RFP"/>
                                 </constraints>
@@ -123,51 +116,56 @@
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Etkinlik Tarihi" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CLa-Xh-GJ4">
                                 <rect key="frame" x="62.666666666666657" y="192" width="249.99999999999997" height="34"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="vMk-rU-rUC">
-                                <rect key="frame" x="16" y="291" width="343" height="331"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="331" id="AF1-2w-EIH"/>
-                                    <constraint firstAttribute="width" constant="343" id="Pig-gS-XgS"/>
-                                </constraints>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                <color key="textColor" systemColor="labelColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6cV-cv-pCX">
-                                <rect key="frame" x="147.33333333333334" y="679" width="80.666666666666657" height="31"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Güncelle"/>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Etkinlik Açıklaması giriniz" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s82-AI-YGI">
-                                <rect key="frame" x="16" y="262" width="200" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Etkinlik detayı" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s82-AI-YGI">
+                                <rect key="frame" x="16" y="262" width="111" height="21"/>
                                 <color key="tintColor" red="0.0" green="0.45882352939999999" blue="0.89019607840000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.45882352939999999" blue="0.89019607840000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C6h-it-4nR">
+                                <rect key="frame" x="147" y="367" width="81" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Güncelle"/>
+                                <connections>
+                                    <action selector="guncelleButton:" destination="eNP-4S-qtE" eventType="touchUpInside" id="bpk-hI-dty"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="zbU-pm-F3b">
+                                <rect key="frame" x="137.66666666666666" y="303" width="100" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="CjU-u5-9Fk"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="gaX-fv-jQt"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="vMk-rU-rUC" firstAttribute="centerX" secondItem="D7i-9y-1ji" secondAttribute="centerX" id="3F5-zI-qZb"/>
+                            <constraint firstItem="zbU-pm-F3b" firstAttribute="centerX" secondItem="D7i-9y-1ji" secondAttribute="centerX" id="Gie-lt-72l"/>
                             <constraint firstItem="CLa-Xh-GJ4" firstAttribute="top" secondItem="5EI-ln-AOF" secondAttribute="bottom" constant="20" id="HHs-Mn-hAm"/>
-                            <constraint firstItem="vMk-rU-rUC" firstAttribute="top" secondItem="CLa-Xh-GJ4" secondAttribute="bottom" constant="65" id="Wip-zm-QEL"/>
+                            <constraint firstItem="C6h-it-4nR" firstAttribute="centerX" secondItem="D7i-9y-1ji" secondAttribute="centerX" id="Qpl-CN-GsE"/>
                             <constraint firstItem="5EI-ln-AOF" firstAttribute="top" secondItem="gaX-fv-jQt" secondAttribute="top" constant="50" id="ZEG-MM-lwR"/>
                             <constraint firstItem="s82-AI-YGI" firstAttribute="leading" secondItem="gaX-fv-jQt" secondAttribute="leading" constant="16" id="a3z-0o-7yx"/>
                             <constraint firstItem="CLa-Xh-GJ4" firstAttribute="leading" secondItem="5EI-ln-AOF" secondAttribute="leading" id="d3I-Dc-ih5"/>
                             <constraint firstItem="s82-AI-YGI" firstAttribute="top" secondItem="CLa-Xh-GJ4" secondAttribute="bottom" constant="36" id="dqR-xw-RPu"/>
                             <constraint firstItem="CLa-Xh-GJ4" firstAttribute="centerX" secondItem="D7i-9y-1ji" secondAttribute="centerX" id="iE8-vl-VIc"/>
-                            <constraint firstItem="6cV-cv-pCX" firstAttribute="centerX" secondItem="D7i-9y-1ji" secondAttribute="centerX" id="lAX-Iy-Xwp"/>
                             <constraint firstItem="5EI-ln-AOF" firstAttribute="centerX" secondItem="D7i-9y-1ji" secondAttribute="centerX" id="m07-4B-kGn"/>
-                            <constraint firstItem="6cV-cv-pCX" firstAttribute="top" secondItem="vMk-rU-rUC" secondAttribute="bottom" constant="57" id="wKn-eu-lXg"/>
+                            <constraint firstItem="zbU-pm-F3b" firstAttribute="top" secondItem="s82-AI-YGI" secondAttribute="bottom" constant="20" id="phM-B5-TMN"/>
+                            <constraint firstItem="C6h-it-4nR" firstAttribute="top" secondItem="zbU-pm-F3b" secondAttribute="bottom" constant="30" id="sar-fU-OGV"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Etkinlik Adı" id="clc-Jj-Z6r"/>
+                    <connections>
+                        <outlet property="detayTextField" destination="zbU-pm-F3b" id="mnH-cp-T8G"/>
+                        <outlet property="etkinlikAdiTextFeld" destination="5EI-ln-AOF" id="BYd-L7-xWs"/>
+                        <outlet property="etkinlikTarihiTextField" destination="CLa-Xh-GJ4" id="bHr-sx-kN3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="V04-ZN-XJq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -204,60 +202,59 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Etkinlik Tarihi" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IlA-Sr-veV">
+                            <textField opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Etkinlik Tarihi" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="IlA-Sr-veV">
                                 <rect key="frame" x="30" y="192" width="315" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="HDy-ZY-eKz">
-                                <rect key="frame" x="16" y="291" width="343" height="331"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Etkinlik detayı girebilirsiniz" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ArV-Qz-7CB">
+                                <rect key="frame" x="20" y="261" width="212" height="21"/>
+                                <color key="tintColor" red="0.0" green="0.45882352939999999" blue="0.89019607840000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.45882352939999999" blue="0.89019607840000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="lJM-or-qXp">
+                                <rect key="frame" x="137.66666666666666" y="302" width="100" height="34"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="331" id="Ijc-jP-SiA"/>
-                                    <constraint firstAttribute="width" constant="343" id="s7o-z7-zLC"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="nac-X4-18Y"/>
                                 </constraints>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I9K-OO-oS9">
-                                <rect key="frame" x="162" y="679" width="51" height="31"/>
+                                <rect key="frame" x="162" y="366" width="51" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Ekle"/>
                                 <connections>
                                     <action selector="ekleButton:" destination="IpH-3u-Fi9" eventType="touchUpInside" id="UUb-vX-OQK"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Etkinlik Açıklaması giriniz" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ArV-Qz-7CB">
-                                <rect key="frame" x="16" y="262" width="200" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" red="0.0" green="0.45882352939999999" blue="0.89019607840000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.45882352939999999" blue="0.89019607840000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="kPa-Ih-YaY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="mvZ-qm-B6R" firstAttribute="leading" secondItem="kPa-Ih-YaY" secondAttribute="leading" constant="30" id="3ri-Bw-C65"/>
-                            <constraint firstItem="HDy-ZY-eKz" firstAttribute="top" secondItem="IlA-Sr-veV" secondAttribute="bottom" constant="65" id="44j-5s-Q3b"/>
                             <constraint firstItem="IlA-Sr-veV" firstAttribute="leading" secondItem="mvZ-qm-B6R" secondAttribute="leading" id="4rs-hr-BPb"/>
+                            <constraint firstItem="lJM-or-qXp" firstAttribute="top" secondItem="ArV-Qz-7CB" secondAttribute="bottom" constant="20" id="4tI-8f-0P4"/>
                             <constraint firstItem="mvZ-qm-B6R" firstAttribute="centerX" secondItem="egb-DS-pPz" secondAttribute="centerX" id="AIX-go-ljF"/>
                             <constraint firstItem="mvZ-qm-B6R" firstAttribute="top" secondItem="kPa-Ih-YaY" secondAttribute="top" constant="50" id="KKN-A4-weJ"/>
+                            <constraint firstItem="lJM-or-qXp" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="kPa-Ih-YaY" secondAttribute="leading" constant="20" id="LaT-r7-jk6"/>
+                            <constraint firstItem="ArV-Qz-7CB" firstAttribute="leading" secondItem="kPa-Ih-YaY" secondAttribute="leading" constant="20" id="TP5-J4-Nxo"/>
+                            <constraint firstItem="ArV-Qz-7CB" firstAttribute="top" secondItem="IlA-Sr-veV" secondAttribute="bottom" constant="35" id="Xip-hJ-e42"/>
                             <constraint firstItem="I9K-OO-oS9" firstAttribute="centerX" secondItem="egb-DS-pPz" secondAttribute="centerX" id="YTx-5C-1Ij"/>
-                            <constraint firstItem="I9K-OO-oS9" firstAttribute="top" secondItem="HDy-ZY-eKz" secondAttribute="bottom" constant="57" id="nvI-Ue-AED"/>
+                            <constraint firstItem="I9K-OO-oS9" firstAttribute="top" secondItem="lJM-or-qXp" secondAttribute="bottom" constant="30" id="dOr-16-ExE"/>
                             <constraint firstItem="IlA-Sr-veV" firstAttribute="centerX" secondItem="egb-DS-pPz" secondAttribute="centerX" id="o1Y-0l-n7p"/>
-                            <constraint firstItem="HDy-ZY-eKz" firstAttribute="centerX" secondItem="egb-DS-pPz" secondAttribute="centerX" id="pcg-o3-HeM"/>
                             <constraint firstItem="IlA-Sr-veV" firstAttribute="top" secondItem="mvZ-qm-B6R" secondAttribute="bottom" constant="20" id="vHb-cQ-wmn"/>
                             <constraint firstItem="kPa-Ih-YaY" firstAttribute="trailing" secondItem="mvZ-qm-B6R" secondAttribute="trailing" constant="30" id="xDe-J0-7Vx"/>
+                            <constraint firstItem="kPa-Ih-YaY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="lJM-or-qXp" secondAttribute="trailing" constant="20" id="xwh-Pz-8Au"/>
+                            <constraint firstItem="lJM-or-qXp" firstAttribute="centerX" secondItem="egb-DS-pPz" secondAttribute="centerX" id="zCC-M6-hdJ"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Geri Sayım Ekle" id="zXg-9W-P0C"/>
                     <connections>
+                        <outlet property="detayTextField" destination="lJM-or-qXp" id="Sov-2B-hrq"/>
                         <outlet property="etkinlikAdiTextField" destination="mvZ-qm-B6R" id="YbL-O4-VDQ"/>
-                        <outlet property="etkinlikDetayTextField" destination="HDy-ZY-eKz" id="ngD-8m-bX7"/>
                         <outlet property="etkinlikTarihiTextField" destination="IlA-Sr-veV" id="9VR-7o-Bpy"/>
                     </connections>
                 </viewController>
@@ -268,10 +265,6 @@
     </scenes>
     <resources>
         <image name="plus" catalog="system" width="128" height="113"/>
-        <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
-        <systemColor name="labelColor">
-            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

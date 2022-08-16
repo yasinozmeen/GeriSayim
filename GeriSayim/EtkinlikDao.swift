@@ -21,7 +21,7 @@ class EtkinlikDao{
         db?.open()
         
         do{
-            let rs =  try db!.executeQuery("SELECT * FROM Etkinlik", values: nil)
+            let rs =  try db!.executeQuery("SELECT * FROM Etkinlik ORDER BY etkinlikTarih ASC" , values: nil)
             while rs.next(){
                 let etkinlik = Etkinlik(etkinlikId: Int(rs.string(forColumn: "etkinlikId") ?? "hata")!, etkinlikAdi: rs.string(forColumn: "etkinlikAd") ?? "hata" , etkinlikTarihi: rs.string(forColumn: "etkinlikTarih") ?? "hata" , etkinlikDetay: rs.string(forColumn: "etkinlikDetay") ?? "Hata")
                 liste.append(etkinlik)
@@ -38,7 +38,32 @@ class EtkinlikDao{
         db?.open()
         
         do{
-            try db?.executeUpdate("INSERT INTO Etkinlik (etkinlikAd,etkinlikTarih,etkinlikDetay) VALUES (?,?,?)", values: [etkinlikAdi,etkinlikTarihi,etkinlikDetay])
+            try db!.executeUpdate("INSERT INTO Etkinlik (etkinlikAd,etkinlikTarih,etkinlikDetay) VALUES (?,?,?)", values: [etkinlikAdi,etkinlikTarihi,etkinlikDetay])
+        }catch{
+            print(error.localizedDescription)
+            
+        }
+        
+        db?.close()
+    }
+    
+    func etkinlikSil(etkinlikId:Int){
+        db?.open()
+        do{
+            try db!.executeUpdate("DELETE FROM Etkinlik WHERE etkinlikId = ?", values: [etkinlikId])
+        }catch{
+            print(error.localizedDescription)
+        }
+        
+        db?.close()
+    }
+    
+    func etkinlikGuncelle(etkinlikId:Int,etkinlikAdi:String,etkinlikTarihi:String,etkinlikDetay:String){
+        db?.open()
+        
+        do{
+            try db!.executeUpdate("UPDATE Etkinlik SET etkinlikAd = ?, etkinlikTarih=?, etkinlikDetay=? WHERE etkinlikId = ? ", values: [etkinlikId,etkinlikAdi,etkinlikTarihi,etkinlikDetay])
+            
         }catch{
             print(error.localizedDescription)
             

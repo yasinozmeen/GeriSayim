@@ -1,23 +1,37 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
     @IBOutlet var tableView: UITableView!
     
-    var liste = [Etkinlik]()
-   
+    
+    static var liste = [Etkinlik]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
-      
         veriTabanıKopyala()
+       
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        ViewController.liste = EtkinlikDao().tumEtkinliklerAL()
+        
+        tableView.reloadData()
+        
         
     }
-    override func viewWillAppear(_ animated: Bool) {
-        liste = EtkinlikDao().tumEtkinliklerAL()
-        tableView.reloadData()
+
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toDetay"{
+            let GVC = segue.destination as! detayViewController
+            GVC.etkinlik = ViewController.liste[sender as! Int]
+        }
     }
+    
+ 
     func veriTabanıKopyala(){
         let bundleYolu = Bundle.main.path(forResource: "EtkinlikDB", ofType: ".db")
         let hedefYolu = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first!
@@ -35,28 +49,42 @@ class ViewController: UIViewController {
             }
         }
     }
-
-    @IBAction func ekleButton(_ sender: Any) {
-    }
     
 }
 
 extension ViewController: UITableViewDelegate, UITableViewDataSource{
+   
+    
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return liste.count
+        return ViewController.liste.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "hucre", for: indexPath) as! hucreTableViewCell
         
-        cell.etkinlikAdiLabel.text = liste[indexPath.row].etkinlikAdi!
-        cell.etkinlikTarihiLAbel.text = liste[indexPath.row].etkinlikTarihi!
-        
+        cell.etkinlikAdiLabel.text = ViewController.liste[indexPath.row].etkinlikAdi!
+        cell.etkinlikTarihiLAbel.text = ViewController.liste[indexPath.row].etkinlikTarihi!
+        cell.kalanZamanAyarla(indexPath: indexPath)
+        cell.backgroundColor =  cell.renkAta(indexPath: indexPath)[0]
+        cell.geriSayimSüreLabel.backgroundColor = cell.renkAta(indexPath: indexPath)[1]
         
         return cell
     }
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "toDetay", sender: indexPath.row)
+    }
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let sil = UIContextualAction(style: .destructive, title: "Sil") { action, view, bool in
+            if let id = ViewController.liste[indexPath.row].etkinlikId{
+                EtkinlikDao().etkinlikSil(etkinlikId:id)
+            }
+            
+            ViewController.liste = EtkinlikDao().tumEtkinliklerAL()
+            tableView.reloadData()
+        }
+        return UISwipeActionsConfiguration(actions: [sil])
+    }
     
 }
