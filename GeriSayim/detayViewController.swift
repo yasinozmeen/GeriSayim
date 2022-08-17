@@ -19,12 +19,12 @@ class detayViewController: UIViewController {
        
     }
     @IBAction func guncelleButton(_ sender: Any) {
-        if let id = etkinlik.etkinlikId, let ad = etkinlikAdiTextFeld.text, let tarih = etkinlikTarihiTextField.text, let detay = detayTextField.text{
-            EtkinlikDao().etkinlikGuncelle(etkinlikId: id, etkinlikAdi: ad, etkinlikTarihi: tarih, etkinlikDetay: detay)
-            print(type(of: id))
-        }
-        navigationController?.popViewController(animated: true)
-   //     GlobalListArray.sharedList.list = EtkinlikDao().tumEtkinliklerAL()
+//        if let id = etkinlik.etkinlikId, let ad = etkinlikAdiTextFeld.text, let tarih = etkinlikTarihiTextField.text, let detay = detayTextField.text{
+//            EtkinlikDao().etkinlikGuncelle(etkinlikId: id, etkinlikAdi: ad, etkinlikTarihi: tarih, etkinlikDetay: detay)
+//            print(type(of: id))
+//        }
+//        navigationController?.popViewController(animated: true)
+//   //     GlobalListArray.sharedList.list = EtkinlikDao().tumEtkinliklerAL()
     }
     
 }

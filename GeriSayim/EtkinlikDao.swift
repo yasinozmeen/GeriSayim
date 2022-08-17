@@ -15,15 +15,30 @@ class EtkinlikDao{
         
         db = FMDatabase(path: veritabanıURL.path)
     }
+  
+    var resim = ViewController.image
+    var sqlSiralama = "SELECT * FROM Etkinlik ORDER BY etkinlikId ASC"
     
     func tumEtkinliklerAL() -> [Etkinlik]{
+        
+        switch resim {
+        case "xmark":
+            sqlSiralama = "SELECT * FROM Etkinlik ORDER BY etkinlikId ASC"
+        case "lessthan":
+            sqlSiralama = "SELECT * FROM Etkinlik ORDER BY etkinlikSaniye ASC"
+        case "greaterthan":
+            sqlSiralama = "SELECT * FROM Etkinlik ORDER BY etkinlikSaniye DESC"
+        default:
+            sqlSiralama = "SELECT * FROM Etkinlik"
+        }
+        
         var liste = [Etkinlik]()
         db?.open()
         
         do{
-            let rs =  try db!.executeQuery("SELECT * FROM Etkinlik ORDER BY etkinlikTarih ASC" , values: nil)
+            let rs =  try db!.executeQuery(sqlSiralama, values: nil)
             while rs.next(){
-                let etkinlik = Etkinlik(etkinlikId: Int(rs.string(forColumn: "etkinlikId") ?? "hata")!, etkinlikAdi: rs.string(forColumn: "etkinlikAd") ?? "hata" , etkinlikTarihi: rs.string(forColumn: "etkinlikTarih") ?? "hata" , etkinlikDetay: rs.string(forColumn: "etkinlikDetay") ?? "Hata")
+                let etkinlik = Etkinlik(etkinlikId: Int(rs.string(forColumn: "etkinlikId") ?? "hata")!, etkinlikAdi: rs.string(forColumn: "etkinlikAd") ?? "hata" , etkinlikTarihi: rs.string(forColumn: "etkinlikTarih") ?? "hata" , etkinlikDetay: rs.string(forColumn: "etkinlikDetay") ?? "Hata",etkinlikSaniye: Int(rs.string(forColumn: "etkinlikSaniye") ?? "Hata")! )
                 liste.append(etkinlik)
             }
         }catch{
@@ -34,11 +49,11 @@ class EtkinlikDao{
         return liste
     }
     
-    func etkinlikEkle(etkinlikAdi:String,etkinlikTarihi:String,etkinlikDetay:String){
+    func etkinlikEkle(etkinlikAdi:String,etkinlikTarihi:String,etkinlikDetay:String,etkinlikSaniye:Int){
         db?.open()
         
         do{
-            try db!.executeUpdate("INSERT INTO Etkinlik (etkinlikAd,etkinlikTarih,etkinlikDetay) VALUES (?,?,?)", values: [etkinlikAdi,etkinlikTarihi,etkinlikDetay])
+            try db!.executeUpdate("INSERT INTO Etkinlik (etkinlikAd,etkinlikTarih,etkinlikDetay,etkinlikSaniye) VALUES (?,?,?,?)", values: [etkinlikAdi,etkinlikTarihi,etkinlikDetay,etkinlikSaniye])
         }catch{
             print(error.localizedDescription)
             
@@ -57,18 +72,18 @@ class EtkinlikDao{
         
         db?.close()
     }
-    
-    func etkinlikGuncelle(etkinlikId:Int,etkinlikAdi:String,etkinlikTarihi:String,etkinlikDetay:String){
-        db?.open()
-        
-        do{
-            try db!.executeUpdate("UPDATE Etkinlik SET etkinlikAd = ?, etkinlikTarih=?, etkinlikDetay=? WHERE etkinlikId = ? ", values: [etkinlikId,etkinlikAdi,etkinlikTarihi,etkinlikDetay])
-            
-        }catch{
-            print(error.localizedDescription)
-            
-        }
-        
-        db?.close()
-    }
+    // burda bir sıkınıt  var - etkinlik saniye parametresi eklenmedi
+    //    func etkinlikGuncelle(etkinlikId:Int,etkinlikAdi:String,etkinlikTarihi:String,etkinlikDetay:String){
+    //        db?.open()
+    //
+    //        do{
+    //            try db!.executeUpdate("UPDATE Etkinlik SET etkinlikAd = ?, etkinlikTarih=?, etkinlikDetay=? WHERE etkinlikId = ? ", values: [etkinlikId,etkinlikAdi,etkinlikTarihi,etkinlikDetay])
+    //
+    //        }catch{
+    //            print(error.localizedDescription)
+    //
+    //        }
+    //
+    //        db?.close()
+    //    }
 }

@@ -12,14 +12,16 @@ class Etkinlik{
     var etkinlikAdi:String?
     var etkinlikTarihi:String?
     var etkinlikDetay:String?
+    var etkinlikSaniye:Int?
     
     init() {
         
     }
-    init(etkinlikId:Int,etkinlikAdi:String,etkinlikTarihi:String,etkinlikDetay:String) {
+    init(etkinlikId:Int,etkinlikAdi:String,etkinlikTarihi:String,etkinlikDetay:String,etkinlikSaniye:Int) {
         self.etkinlikId = etkinlikId
         self.etkinlikAdi = etkinlikAdi
         self.etkinlikTarihi = etkinlikTarihi
         self.etkinlikDetay = etkinlikDetay
+        self.etkinlikSaniye = etkinlikSaniye
     }
 }

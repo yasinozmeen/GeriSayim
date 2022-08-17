@@ -81,6 +81,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Etkinlikler" id="2Rn-Vi-8kk">
+                        <barButtonItem key="leftBarButtonItem" title="Sıralama " image="xmark" catalog="system" id="URa-Yk-zXy">
+                            <connections>
+                                <action selector="sıralamaButton:" destination="BYZ-38-t0r" id="UQx-a1-q2S"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Item" image="plus" catalog="system" id="4tw-So-en1">
                             <connections>
                                 <action selector="ekleButton:" destination="BYZ-38-t0r" id="XTL-pK-zOO"/>
@@ -89,6 +94,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="sıralamaButton" destination="URa-Yk-zXy" id="dtW-DB-pOg"/>
                         <outlet property="tableView" destination="mJo-69-ZGE" id="07L-FB-oQF"/>
                         <segue destination="eNP-4S-qtE" kind="show" identifier="toDetay" id="9IQ-On-XHe"/>
                     </connections>
@@ -265,6 +271,7 @@
     </scenes>
     <resources>
         <image name="plus" catalog="system" width="128" height="113"/>
+        <image name="xmark" catalog="system" width="128" height="113"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

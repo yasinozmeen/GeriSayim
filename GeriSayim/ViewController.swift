@@ -3,21 +3,29 @@ import UIKit
 class ViewController: UIViewController {
     
     @IBOutlet var tableView: UITableView!
+    @IBOutlet var sıralamaButton: UIBarButtonItem!
     
     
     static var liste = [Etkinlik]()
+    
+    static var image = "xmark"
     
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
         veriTabanıKopyala()
-       
     }
     
+    /*
+     küçüktür = azdan çoğa
+     büyüktür = çoktan aza
+     eşittir = sıralamasız
+     */
+    
     override func viewWillAppear(_ animated: Bool) {
-        ViewController.liste = EtkinlikDao().tumEtkinliklerAL()
         
+        ViewController.liste = EtkinlikDao().tumEtkinliklerAL()
         tableView.reloadData()
         
         
@@ -29,6 +37,18 @@ class ViewController: UIViewController {
             let GVC = segue.destination as! detayViewController
             GVC.etkinlik = ViewController.liste[sender as! Int]
         }
+    }
+    @IBAction func sıralamaButton(_ sender: Any) {
+        switch ViewController.image {
+        case "xmark": ViewController.image = "lessthan"
+        case "lessthan": ViewController.image = "greaterthan"
+        case "greaterthan": ViewController.image = "xmark"
+        default:
+            ViewController.image = "xmark"
+        }
+        sıralamaButton.image = UIImage.init(systemName: ViewController.image)
+        ViewController.liste = EtkinlikDao().tumEtkinliklerAL()
+        tableView.reloadData()
     }
     
  
