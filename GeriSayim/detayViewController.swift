@@ -47,9 +47,9 @@ class detayViewController: UIViewController {
                 let formatter = DateFormatter()
                 formatter.dateFormat = "d-MM-yyyy HH:mm"
                 
-                let bugun = formatter.date(from: formatter.string(from: Date()))
+                
                 let etkinlikTarihi = formatter.date(from: tarih)
-                let diffSeconds = etkinlikTarihi!.timeIntervalSinceReferenceDate - bugun!.timeIntervalSinceReferenceDate
+                let diffSeconds = etkinlikTarihi!.timeIntervalSinceReferenceDate - Date().timeIntervalSince1970
                
                 print(diffSeconds)
                 EtkinlikDao().etkinlikGuncelle(etkinlikId: id, etkinlikAdi: ad, etkinlikTarihi: tarih, etkinlikDetay: detay, etkinlikSaniye: Int(diffSeconds))
