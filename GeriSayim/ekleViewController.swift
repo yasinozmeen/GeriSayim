@@ -42,11 +42,11 @@ class ekleViewController: UIViewController {
                 
                 let formatter = DateFormatter()
                 formatter.dateFormat = "d-MM-yyyy HH:mm"
-                
+               
                
                 let etkinlikTarihi = formatter.date(from: tarih)
                 let diffSeconds = etkinlikTarihi!.timeIntervalSinceReferenceDate - Date().timeIntervalSince1970
-                
+    
                 print(diffSeconds)
                 EtkinlikDao().etkinlikEkle(etkinlikAdi: ad, etkinlikTarihi: tarih, etkinlikDetay: detay,etkinlikSaniye: Int(diffSeconds))
                 navigationController?.popViewController(animated: true)
