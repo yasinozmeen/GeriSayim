@@ -72,18 +72,18 @@ class EtkinlikDao{
         
         db?.close()
     }
-    // burda bir sıkınıt  var - etkinlik saniye parametresi eklenmedi
-    //    func etkinlikGuncelle(etkinlikId:Int,etkinlikAdi:String,etkinlikTarihi:String,etkinlikDetay:String){
-    //        db?.open()
-    //
-    //        do{
-    //            try db!.executeUpdate("UPDATE Etkinlik SET etkinlikAd = ?, etkinlikTarih=?, etkinlikDetay=? WHERE etkinlikId = ? ", values: [etkinlikId,etkinlikAdi,etkinlikTarihi,etkinlikDetay])
-    //
-    //        }catch{
-    //            print(error.localizedDescription)
-    //
-    //        }
-    //
-    //        db?.close()
-    //    }
+     
+        func etkinlikGuncelle(etkinlikId:Int,etkinlikAdi:String,etkinlikTarihi:String,etkinlikDetay:String,etkinlikSaniye:Int){
+            db?.open()
+    
+            do{
+                try db!.executeUpdate("UPDATE Etkinlik SET etkinlikAd = ?, etkinlikTarih=?, etkinlikDetay=?,etkinlikSaniye=? WHERE etkinlikId = ? ", values: [etkinlikAdi,etkinlikTarihi,etkinlikDetay,etkinlikSaniye,etkinlikId])
+                print("eklendi")
+            }catch{
+                print(error.localizedDescription)
+    
+            }
+    
+            db?.close()
+        }
 }

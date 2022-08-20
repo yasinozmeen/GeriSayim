@@ -2,10 +2,9 @@ import UIKit
 
 class ekleViewController: UIViewController {
     @IBOutlet var etkinlikAdiTextField: UITextField!
-    
     @IBOutlet var detayTextField: UITextField!
     @IBOutlet var etkinlikTarihiTextField: UITextField!
-    @IBOutlet var segmented: UISegmentedControl!
+   
     
     var datePicker:UIDatePicker?
     
@@ -18,6 +17,7 @@ class ekleViewController: UIViewController {
         datePicker?.datePickerMode = .dateAndTime
         etkinlikTarihiTextField.inputView = datePicker
         datePicker?.addTarget(self, action: #selector(tarihGoster(datePicker:)), for: .allEvents)
+        
         
     }
     
@@ -50,15 +50,16 @@ class ekleViewController: UIViewController {
                 print(diffSeconds)
                 EtkinlikDao().etkinlikEkle(etkinlikAdi: ad, etkinlikTarihi: tarih, etkinlikDetay: detay,etkinlikSaniye: Int(diffSeconds))
                 navigationController?.popViewController(animated: true)
+                
+                
+                
+                
             }
         }
         
-        
-        
-        
     }
-    
 }
+
 /*
  if let listTarih = ViewController.liste[indexPath.row].etkinlikTarihi{
  

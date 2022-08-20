@@ -1,5 +1,6 @@
 import UIKit
 
+
 class ViewController: UIViewController {
     
     @IBOutlet var tableView: UITableView!
@@ -7,29 +8,25 @@ class ViewController: UIViewController {
     
     
     static var liste = [Etkinlik]()
-    
     static var image = "xmark"
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
         veriTabanıKopyala()
+        
+       
     }
-    
-    /*
-     küçüktür = azdan çoğa
-     büyüktür = çoktan aza
-     eşittir = sıralamasız
-     */
     
     override func viewWillAppear(_ animated: Bool) {
         
         ViewController.liste = EtkinlikDao().tumEtkinliklerAL()
         tableView.reloadData()
-        
-        
     }
+    
 
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
