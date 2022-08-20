@@ -46,7 +46,7 @@ class ekleViewController: UIViewController {
                 let bugun = formatter.date(from: formatter.string(from: Date()))
                 let etkinlikTarihi = formatter.date(from: tarih)
                 let diffSeconds = etkinlikTarihi!.timeIntervalSinceReferenceDate - bugun!.timeIntervalSinceReferenceDate
-               
+                // ***Bugün*** gibi değişken olmayan daha spesifik bir tarih ile arasındaki saniyeyi bulmamız gerekiyor bu sistem yanlış. 
                 print(diffSeconds)
                 EtkinlikDao().etkinlikEkle(etkinlikAdi: ad, etkinlikTarihi: tarih, etkinlikDetay: detay,etkinlikSaniye: Int(diffSeconds))
                 navigationController?.popViewController(animated: true)
